@@ -1,0 +1,11 @@
+def convert_number(number):
+    binary = bin(number)[2:] 
+    octal = oct(number)[2:]  
+    print(f"Десятичное число: {number}")
+    print(f"Двоичное: {binary}")
+    print(f"Восьмеричное: {octal}")
+try:
+    decimal_number = int(input("Введите десятичное число: "))
+    convert_number(decimal_number)
+except ValueError:
+    print("Пожалуйста, введите корректное целое число.")
