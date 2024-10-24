@@ -1,0 +1,19 @@
+def dec_to_13(n):
+    symbols = "0123456789AB"
+    result = ""
+    if n == 0:
+        return symbols[0]  # Обработка случая 0
+    while n > 0:
+        result = symbols[n % 13] + result
+        n //= 13
+    return result
+def main():
+    dec_n = input("Введите целое неотрицательное десятичное число: ")
+    if str.isnumeric(dec_n):
+        dec_n = int(dec_n)
+        conv_n = dec_to_13(dec_n)
+        print(f"{dec_n} в тринадцатиричной системе: {conv_n}")
+    else:
+        print("Вы ввели не целое и/или отрицательное число, перезапустите и введите целое неотрицательное число")
+if __name__ == "__main__":
+    main()
