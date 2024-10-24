@@ -1,0 +1,7 @@
+def calculate_x(a, b, c):
+    return 7 * b + 2 * c - a
+a = float(input("Введите значение a: "))
+b = float(input("Введите значение b: "))
+c = float(input("Введите значение c: "))
+x = calculate_x(a, b, c)
+print(f"Результат: x = {x}")
